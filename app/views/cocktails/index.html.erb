@@ -1,0 +1,13 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Cocktails<%= link_to '⚡️ Create a cocktail ⚡️', new_cocktail_path, class: "btn btn-success"%></a>
+</nav>
+<div class="container col-6 pt-1">
+  <div class="col justify-content-center">
+  <h1 class="col justify-content-center pl-5 pt-3"> Our cocktails</h1>
+    <div class ="list-unstyled">
+    <% @cocktails.each do |c| %>
+    <h2><%= link_to c.name, cocktail_path(c) %></h2>
+    <% end %>
+  </div>
+</div>
+
